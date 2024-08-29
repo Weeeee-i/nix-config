@@ -26,5 +26,6 @@
     ../../home_modules/ssh.nix
     ../../home_modules/gpg.nix
     ../../home_modules/git.nix
+	../../home_modules/mihomo.nix
   ];
 }
