@@ -1,0 +1,33 @@
+(defwindow status_bar
+  :monitor 0
+  :geometry (geometry :x "0%"
+					  :y "0px"
+					  :width "100%"
+					  :height "28px"
+					  :anchor "top center")
+  :stacking "overlay"
+  :exclusive true
+  (box date time "BL: ${backlight}%" "VOL: ${volume}" "${battery_status}: ${battery}%")
+)
+
+(defpoll time	:interval "1s"
+				:initial "initial-value"
+				:run-while "whatever"
+				`date +%H:%M:%S`)
+
+(defpoll battery	:interval "15s"
+					"/bin/sh ./scripts/battery --bat")
+
+(defpoll battery_status	:interval "1m"
+						"/bin/sh ./scripts/battery --bat-st")
+
+(defpoll backlight	:interval "1s"
+					"light")
+
+(defpoll date	:interval "1s"
+				"date +%Y/%m/%d")
+
+(defpoll volume :interval "1s"
+				"/bin/sh ./scripts/volume")
+
+
