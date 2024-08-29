@@ -1,1 +1,1 @@
-config/mihomo/* filter=git-crypt diff=git-crypt
+config/mihomo/test.conf filter=git-crypt diff=git-crypt
