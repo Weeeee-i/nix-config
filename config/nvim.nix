@@ -1,6 +1,6 @@
 {
   xdg.configFile.nvim = {
     enable = true;
-    source = ./nvim;
+    source = ./config/nvim;
   };
 }

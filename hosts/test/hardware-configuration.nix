@@ -18,21 +18,28 @@
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/b340044a-6dd1-46a9-83be-5a698008317c";
-    fsType = "btrfs";
-    options = ["subvol=@"];
+    device = "none";
+    fsType = "tmpfs";
+    options = ["defaults" "size=2G" "mode=755"];
   };
 
-  fileSystems."/.snapshot" = {
+  fileSystems."/snapshot" = {
     device = "/dev/disk/by-uuid/b340044a-6dd1-46a9-83be-5a698008317c";
     fsType = "btrfs";
-    options = ["subvol=@.snapshot"];
+    options = ["subvol=@snapshot"];
   };
 
-  fileSystems."/home" = {
+  fileSystems."/persistent" = {
     device = "/dev/disk/by-uuid/b340044a-6dd1-46a9-83be-5a698008317c";
     fsType = "btrfs";
-    options = ["subvol=@home"];
+    neededForBoot = true;
+    options = ["subvol=@persistent" "compress=zstd"];
+  };
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/b340044a-6dd1-46a9-83be-5a698008317c";
+    fsType = "btrfs";
+    options = ["subvol=nix" "compress-force=zstd"];
   };
 
   fileSystems."/boot" = {

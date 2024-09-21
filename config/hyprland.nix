@@ -1,6 +1,6 @@
 {
   xdg.configFile.hypr = {
     enable = true;
-    source = ./hypr;
+    source = ./config/hypr;
   };
 }

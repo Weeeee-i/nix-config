@@ -1,4 +1,5 @@
-{
+{pkgs, ...}: {
+  # Audio
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -6,5 +7,5 @@
     pulse.enable = true;
   };
 
-  imports = [./alsa-utils.nix];
+  environment.systemPackages = [pkgs.alsa-utils];
 }

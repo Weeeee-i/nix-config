@@ -7,8 +7,8 @@
   home.homeDirectory = "/home/wei";
 
   imports = [
-    ./hosts/youc/home.nix
-    ./hosts/youc/config.nix
+    ./home
+    ./config
   ];
 
   home.stateVersion = "24.05";

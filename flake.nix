@@ -21,16 +21,22 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
-    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     auto-cpufreq = {
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = {
@@ -38,7 +44,8 @@
     nixpkgs,
     alejandra,
     home-manager,
-    # auto-cpufreq,
+    auto-cpufreq,
+    impermance,
     ...
   } @ inputs: {
     nixosConfigurations.youc = nixpkgs.lib.nixosSystem {
