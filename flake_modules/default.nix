@@ -1,21 +1,21 @@
 {
   imports = [
-    i18n.nix
+    ./i18n.nix
 
-    windowManager.nix
+    ./windowManager.nix
 
-    gpu.nix
+    ./gpu.nix
 
-    multiMedia.nix
+    ./multiMedia.nix
 
-    network.nix
+    ./network.nix
 
-    podman.nix
+    ./podman.nix
 
-    powerManagement.nix
+    ./powerManagement.nix
 
-    system-boot.nix
+    ./system-boot.nix
 
-    utils.nix
+    ./utils.nix
   ];
 }

@@ -1,3 +1,4 @@
+# 游戏设置
 {pkgs, ...}: {
   home.packages = with pkgs; [
     steam

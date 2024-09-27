@@ -1,5 +1,6 @@
+# 窗口管理器
 {pkgs, ...}: {
-  # Greetd
+  # 使用 Greetd + TuiGreet 作为登陆界面
   services.greetd = {
     enable = true;
     settings = {
@@ -9,17 +10,18 @@
     };
   };
 
-  # Hyprland
+  # 使用 Hyprland 作为窗口管理器
   programs.hyprland.enable = true;
 
-  environments.packages = with pkgs; [
-    eww # Bar
-    wofi # Application Launcher
+  environment.systemPackages = with pkgs; [
+    eww # 可高度定制化的状态栏
+    wofi # 应用启动器
+    dunst # 通知程序
   ];
 
   # XWayland
   programs.xwayland.enable = true;
 
-  # Browsers
-  imports = [./firefox.nix];
+  # 浏览器
+  imports = [./browser.nix];
 }

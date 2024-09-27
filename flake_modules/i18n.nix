@@ -1,7 +1,9 @@
+# 本地化设置
 {
+  # 时区设置
   time.timeZone = "Asia/Shanghai";
 
-  # Select internationalisation properties.
+  # 默认 Locale
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {

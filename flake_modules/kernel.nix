@@ -1,4 +1,5 @@
+# 内核设置
 {pkgs, ...}: {
   boot.kernelPackages = pkgs.linuxPackages;
-  boot.consoleLogLevel = 7;
+  boot.consoleLogLevel = 1;
 }

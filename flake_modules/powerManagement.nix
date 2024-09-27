@@ -1,4 +1,7 @@
+# 电源管理
 {
+  # 使用 Auto-cpufreq 管理电源
+  # Github: https://github.com/AdnanHodzic/auto-cpufreq
   services.auto-cpufreq = {
     enable = true;
 

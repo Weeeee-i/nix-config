@@ -45,7 +45,7 @@
     alejandra,
     home-manager,
     auto-cpufreq,
-    impermance,
+    impermanence,
     ...
   } @ inputs: {
     nixosConfigurations.youc = nixpkgs.lib.nixosSystem {
@@ -53,6 +53,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/youc/configuration.nix
+        impermanence.nixosModules.impermanence
 
         home-manager.nixosModules.home-manager
         {

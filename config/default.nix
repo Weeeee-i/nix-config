@@ -1,7 +1,7 @@
 {
   imports = [
-    eww.nix
-    hyprland.nix
-    nvim.nix
+    ./eww.nix
+    ./hyprland.nix
+    ./nvim.nix
   ];
 }

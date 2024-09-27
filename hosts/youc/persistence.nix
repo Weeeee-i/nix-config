@@ -20,6 +20,17 @@
         "Videos"
         "Containers"
         "Persistent"
+        "KeepassXC"
+        "Scripts"
+        ".local/share/nvim"
+        ".local/share/Anki2"
+        ".local/share/zinit"
+        ".local/state/syncthing"
+        ".mozilla"
+        ".config/mihomo"
+        ".config/fcitx5"
+        ".config/rclone"
+        ".config/obsidian"
         {
           directory = ".gnupg";
           mode = "0700";
@@ -30,7 +41,9 @@
         }
       ];
 
-      files = [];
+      files = [
+        ".zshrc"
+      ];
     };
   };
 }

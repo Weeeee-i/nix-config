@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/wei";
 
   imports = [
-    ./home
+    ./home_modules
     ./config
   ];
 

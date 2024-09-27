@@ -11,7 +11,6 @@ require("lazy").setup({
 		{
 			"echasnovski/mini.nvim",
 			init = function()
-				require("mini.completion").setup({})
 				require("mini.pairs").setup()
 				require("mini.cursorword").setup()
 				require("mini.icons").setup()
@@ -21,6 +20,18 @@ require("lazy").setup({
 				require("mini.surround").setup()
 			end,
 		},
+		{
+		  "hrsh7th/nvim-cmp",
+		  dependencies = {
+			"hrsh7th/cmp-cmdline",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp",
+			"L3MON4D3/LuaSnip",
+			"saadparwaiz1/cmp_luasnip",
+		  },
+		},
+
 		{
 			"williamboman/mason.nvim",
 			init = function()
